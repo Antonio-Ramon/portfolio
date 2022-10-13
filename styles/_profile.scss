@@ -1,0 +1,50 @@
+.profile-card {
+    @include card;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    padding-top: $defaultSpacing * 1.5;
+    padding-bottom: $defaultSpacing * 1.5;
+  
+    > .image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      $size: 128px;
+  
+      width: $size;
+      height: $size;
+      border-radius: $size;
+  
+      border: 4px solid var(--brand-solid);
+  
+      > img {
+        width: 94%;
+        height: 94%;
+        object-fit: cover;
+        border-radius: inherit;
+  
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+  
+    > strong {
+      margin-top: $defaultSpacing;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      text-align: center;
+    }
+  
+    > span {
+      margin-top: $defaultSpacing / 4;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: var(--low-contrast);
+    }
+}

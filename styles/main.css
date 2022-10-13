@@ -1,0 +1,161 @@
+:root {
+  --background: hsl(300, 20.0%, 99.0%);
+  --element: hsl(294, 5.5%, 95.3%);
+  --element-hover: hsl(289, 4.7%, 93.3%);
+  --element-hover-border: hsl(255, 3.7%, 78.8%);
+  --low-contrast: hsl(252, 4.0%, 44.8%);
+  --high-contrast: hsl(260, 25.0%, 11.0%);
+  --brand-solid: hsl(292, 45.0%, 51.0%);
+  --brand-high-contrast: hsl(291, 66.0%, 14.0%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: hsl(246, 6.0%, 9.0%);
+    --element: hsl(241, 5.0%, 14.3%);
+    --element-hover: hsl(242, 4.9%, 16.5%);
+    --element-hover-border: hsl(247, 4.8%, 32.5%);
+    --low-contrast: hsl(253, 4.0%, 63.7%);
+    --high-contrast: hsl(256, 6.0%, 93.2%);
+    --brand-solid: hsl(292, 45.0%, 51.0%);
+    --brand-high-contrast: hsl(296, 74.0%, 95.7%);
+  }
+}
+html {
+  background-color: var(--background);
+  color: var(--high-contrast);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "Merriweather Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Metrics */
+.profile-card {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.profile-card > .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 128px;
+  border: 4px solid var(--brand-solid);
+}
+.profile-card > .image-container > img {
+  width: 94%;
+  height: 94%;
+  object-fit: cover;
+  border-radius: inherit;
+  user-select: none;
+  pointer-events: none;
+}
+.profile-card > strong {
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+.profile-card > span {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--low-contrast);
+}
+
+body {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1366px) {
+  body {
+    max-width: 1172px;
+  }
+}
+@media screen and (max-width: 1172px) {
+  body {
+    max-width: 970px;
+  }
+}
+@media screen and (max-width: 970px) {
+  body {
+    max-width: 767px;
+  }
+}
+body > main {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+}
+@media screen and (max-width: 970px) {
+  body > main {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+body > main > aside {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 348px;
+}
+@media screen and (max-width: 970px) {
+  body > main > aside {
+    width: unset;
+    gap: 20px;
+  }
+}
+body > main > section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (max-width: 970px) {
+  body > main > section {
+    gap: 20px;
+  }
+}
+body > footer {
+  align-self: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--low-contrast);
+  padding: 20px 0;
+}
+body > footer > a {
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 4px;
+  color: var(--low-contrast);
+  font-weight: 500;
+  outline: 2px solid transparent;
+  transition: background-color 150ms ease-out, color 150ms ease-out, outline-color 150ms ease-out;
+}
+body > footer > a:hover, body > footer > a:focus {
+  background-color: var(--element-hover);
+  color: var(--high-contrast);
+}
+body > footer > a:focus-visible {
+  outline-color: var(--element-hover-border);
+}
+
+/*# sourceMappingURL=main.css.map */
