@@ -1,0 +1,41 @@
+.info-card {
+    @include card;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: $defaultSpacing 0;
+
+    > .info-item {
+        display: flex;
+        align-items: center;
+        gap: $defaultSpacing;
+
+        padding: $defaultSpacing / 2 $defaultSpacing * 2;
+
+        color: var(--high-contrast);
+        stroke: var(--low-contrast);
+
+        > svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:is(a) {
+            text-decoration: none;
+
+            outline: 2px solid transparent;
+
+            transition: background-color 150ms ease-out, outline-color 150ms ease-out;
+
+            &:hover,
+            &:focus {
+                background-color: var(--element-hover);
+            }
+
+            &:focus-visible {
+                outline-color: var(--element-hover-border);
+            }
+        }
+    }
+}

@@ -79,6 +79,39 @@ html {
   color: var(--low-contrast);
 }
 
+.info-card {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.info-card > .info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 40px;
+  color: var(--high-contrast);
+  stroke: var(--low-contrast);
+}
+.info-card > .info-item > svg {
+  width: 24px;
+  height: 24px;
+}
+.info-card > .info-item:is(a) {
+  text-decoration: none;
+  outline: 2px solid transparent;
+  transition: background-color 150ms ease-out, outline-color 150ms ease-out;
+}
+.info-card > .info-item:is(a):hover, .info-card > .info-item:is(a):focus {
+  background-color: var(--element-hover);
+}
+.info-card > .info-item:is(a):focus-visible {
+  outline-color: var(--element-hover-border);
+}
+
 body {
   width: 100%;
   max-width: 1366px;
