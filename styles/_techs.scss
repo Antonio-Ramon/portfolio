@@ -1,0 +1,40 @@
+.techs-card {
+    @include card;
+
+    display: flex;
+    flex-direction: column;
+    gap: $defaultSpacing;
+
+    padding: $defaultSpacing * 1.5 $defaultSpacing;
+    
+    > header {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+
+    > ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: calc($defaultSpacing / 2);
+
+        margin: 0;
+        padding: 0;
+
+        padding: 0 calc($defaultSpacing / 2);
+
+        > li {
+            list-style: none;
+
+            padding: 0 calc($defaultSpacing / 2);
+            border-radius: 24px;
+            background-color: var(--brand-solid);
+
+            font-size: 12px;
+            line-height: 24px;
+            height: 24px;
+            font-weight: 700;
+            color: var(--brand-high-contrast);
+        }
+    }
+}

@@ -112,6 +112,129 @@ html {
   outline-color: var(--element-hover-border);
 }
 
+.techs-card {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+}
+.techs-card > header {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.techs-card > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  padding: 0 10px;
+}
+.techs-card > ul > li {
+  list-style: none;
+  padding: 0 10px;
+  border-radius: 24px;
+  background-color: var(--brand-solid);
+  font-size: 12px;
+  line-height: 24px;
+  height: 24px;
+  font-weight: 700;
+  color: var(--brand-high-contrast);
+}
+
+.xp-card {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+}
+.xp-card > header {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.xp-card > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  padding: 0 20px;
+}
+.xp-card > ul > li {
+  margin-left: 10px;
+  color: var(--low-contrast);
+}
+.xp-card > ul > li > strong {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.xp-card > ul > li > span {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.xp-card > ul > li > p {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.education-card {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+}
+.education-card > header {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.education-card > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  padding: 0 20px;
+}
+.education-card > ul > li {
+  margin-left: 10px;
+  color: var(--low-contrast);
+}
+.education-card > ul > li > strong {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.education-card > ul > li > span {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 300;
+}
+.education-card > ul > li > p {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
 body {
   width: 100%;
   max-width: 1366px;

@@ -1,0 +1,52 @@
+.xp-card {
+    @include card;
+
+    display: flex;
+    flex-direction: column;
+    gap: $defaultSpacing;
+
+    padding: $defaultSpacing * 1.5 $defaultSpacing;
+
+    > header {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+
+    > ul {
+        display: flex;
+        flex-direction: column;
+        gap: calc($defaultSpacing / 2 );
+
+        margin: 0;
+        padding: 0;
+
+        padding: 0 $defaultSpacing;
+
+        > li {
+            margin-left: calc($defaultSpacing / 2);
+
+            color: var(--low-contrast);
+
+            > strong {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 700;
+            }
+
+            > span {
+                display: block;
+
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 300;
+            }
+
+            > p {
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+}

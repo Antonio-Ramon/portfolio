@@ -11,7 +11,7 @@
         align-items: center;
         gap: $defaultSpacing;
 
-        padding: $defaultSpacing / 2 $defaultSpacing * 2;
+        padding: calc($defaultSpacing / 2) $defaultSpacing * 2;
 
         color: var(--high-contrast);
         stroke: var(--low-contrast);
