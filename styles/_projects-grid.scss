@@ -1,0 +1,58 @@
+.projects-grid-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $defaultSpacing;
+
+    @media screen and (max-width: $largeScreen) {
+        grid-template-columns: 1fr;
+    }
+
+    > a {
+        @include card;
+
+        text-decoration: none;
+        padding: 0;
+        text-align: start;
+
+        outline: 2px solid transparent;
+
+        transition: outline-color 150ms ease-out;
+
+        &:hover,
+        &:focus {
+          > div {
+            background-color: var(--element-hover)
+          }
+        }
+
+        &:focus-visible {
+            outline-color: var(--element-hover-border);
+        }
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            gap: $defaultSpacing;
+      
+            padding: $defaultSpacing * 1.5;
+      
+            color: var(--high-contrast);
+            stroke: var(--high-contrast);
+      
+            border-radius: inherit;
+      
+            transition: background-color 150ms ease-out;
+            
+            > header {
+                display: flex;
+                align-items: center;
+                gap: calc($defaultSpacing / 2);
+
+                // > strong {
+                
+                // }
+            }
+        }
+    }
+}

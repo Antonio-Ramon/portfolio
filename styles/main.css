@@ -235,6 +235,89 @@ html {
   font-weight: 500;
 }
 
+.projects-header-card {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.projects-header-card > strong {
+  font-size: 20px;
+  line-height: 32px;
+}
+.projects-header-card > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 0 20px;
+  margin-right: -2.5px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--low-contrast);
+  text-decoration: none;
+  outline: 2px solid transparent;
+  transition: background-color 150ms ease-out, color 150ms ease-out, outline-color 150ms ease-out;
+}
+.projects-header-card > a:hover, .projects-header-card > a:focus {
+  background-color: var(--element-hover);
+  color: var(--high-contrast);
+}
+.projects-header-card > a:focus-visible {
+  outline-color: var(--element-hover-border);
+}
+
+.projects-grid-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 1172px) {
+  .projects-grid-card {
+    grid-template-columns: 1fr;
+  }
+}
+.projects-grid-card > a {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 0;
+  text-align: start;
+  outline: 2px solid transparent;
+  transition: outline-color 150ms ease-out;
+}
+.projects-grid-card > a:hover > div, .projects-grid-card > a:focus > div {
+  background-color: var(--element-hover);
+}
+.projects-grid-card > a:focus-visible {
+  outline-color: var(--element-hover-border);
+}
+.projects-grid-card > a > div {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: 20px;
+  padding: 30px;
+  color: var(--high-contrast);
+  stroke: var(--high-contrast);
+  border-radius: inherit;
+  transition: background-color 150ms ease-out;
+}
+.projects-grid-card > a > div > header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 body {
   width: 100%;
   max-width: 1366px;
