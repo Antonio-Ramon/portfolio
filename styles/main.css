@@ -369,10 +369,69 @@ html {
 .projects-grid-card > a > div > footer > .lang > .dot.javascript {
   background-color: #d6d304;
 }
+.projects-grid-card > a > div > footer > .lang > .dot.html {
+  background-color: #e34c26;
+}
+.projects-grid-card > a > div > footer > .lang > .dot.scss {
+  background-color: #c6538c;
+}
 .projects-grid-card > a > div > footer > .lang > span {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+}
+
+.posts-header-card {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.posts-header-card > strong {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.posts-card {
+  background-color: var(--element);
+  padding: 20px;
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.posts-card > .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 128px;
+}
+.posts-card > .image-container > img {
+  width: 94%;
+  height: 94%;
+  object-fit: cover;
+  border-radius: inherit;
+  user-select: none;
+  pointer-events: none;
+}
+.posts-card > strong {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  text-align: right;
 }
 
 body {

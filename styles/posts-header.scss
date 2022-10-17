@@ -1,0 +1,16 @@
+.posts-header-card {
+    @include card;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $defaultSpacing;
+
+    padding-left: $defaultSpacing * 1.5;
+    padding-right: $defaultSpacing * 1.5;
+
+    > strong {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
