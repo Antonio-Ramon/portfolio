@@ -49,10 +49,79 @@
                 align-items: center;
                 gap: calc($defaultSpacing / 2);
 
-                // > strong {
-                
-                // }
+                > strong {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
+
+            > p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+        
+                color: var(--low-contrast);
+              }
+
+              > footer {
+                    align-self: stretch;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: $defaultSpacing;
+
+                    color: var(--low-contrast);
+                    stroke: var(--low-contrast);
+
+                > .info {
+                    display: flex;
+                    align-items: center;
+                    gap: $defaultSpacing;
+
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        gap: calc($defaultSpacing / 2);
+                        
+                        > span {
+                            font: 14px;
+                            line-height: 20px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                > .lang {
+                    display: flex;
+                    align-items: center;
+                    gap: calc($defaultSpacing / 2);
+
+                    > .dot {
+                        $size: 8px;
+
+                        width: $size;
+                        height: $size;
+                        border-radius: $size;
+                        border: 2px solid var(--low-contrast);
+
+                        &.typescript {
+                            background-color: #2b7489;
+                        }
+
+                        &.javascript {
+                            background-color: #d6d304;
+                        }
+                    }
+
+                    > span {
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 400;
+                    }
+                }
+              }
+
         }
     }
 }
