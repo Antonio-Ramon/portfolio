@@ -404,34 +404,8 @@ html {
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.posts-card > .image-container {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 128px;
-  height: 128px;
-  border-radius: 128px;
-}
-.posts-card > .image-container > img {
-  width: 94%;
-  height: 94%;
-  object-fit: cover;
-  border-radius: inherit;
-  user-select: none;
-  pointer-events: none;
-}
-.posts-card > strong {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 10px;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 700;
-  text-align: right;
+  gap: 20px;
 }
 
 body {
