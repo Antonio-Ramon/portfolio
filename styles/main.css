@@ -1,4 +1,19 @@
-:root {
+html {
+  background-color: var(--background);
+  color: var(--high-contrast);
+  --background: hsl(300, 20.0%, 99.0%);
+  --element: hsl(294, 5.5%, 95.3%);
+  --element-hover: hsl(289, 4.7%, 93.3%);
+  --element-hover-border: hsl(255, 3.7%, 78.8%);
+  --low-contrast: hsl(252, 4.0%, 44.8%);
+  --high-contrast: hsl(260, 25.0%, 11.0%);
+  --brand-solid: hsl(292, 45.0%, 51.0%);
+  --brand-high-contrast: hsl(291, 66.0%, 14.0%);
+}
+
+html[data-theme=darktheme] {
+  background-color: var(--background);
+  color: var(--high-contrast);
   --background: hsl(246, 6.0%, 9.0%);
   --element: hsl(241, 5.0%, 14.3%);
   --element-hover: hsl(242, 4.9%, 16.5%);
@@ -7,23 +22,6 @@
   --high-contrast: hsl(256, 6.0%, 93.2%);
   --brand-solid: hsl(292, 45.0%, 51.0%);
   --brand-high-contrast: hsl(296, 74.0%, 95.7%);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: hsl(300, 20.0%, 99.0%);
-    --element: hsl(294, 5.5%, 95.3%);
-    --element-hover: hsl(289, 4.7%, 93.3%);
-    --element-hover-border: hsl(255, 3.7%, 78.8%);
-    --low-contrast: hsl(252, 4.0%, 44.8%);
-    --high-contrast: hsl(260, 25.0%, 11.0%);
-    --brand-solid: hsl(292, 45.0%, 51.0%);
-    --brand-high-contrast: hsl(291, 66.0%, 14.0%);
-  }
-}
-html {
-  background-color: var(--background);
-  color: var(--high-contrast);
 }
 
 * {
@@ -36,11 +34,56 @@ html {
 }
 
 /* Metrics */
+html {
+  background: var(--background);
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+label {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 30px;
+  background: hsl(292deg, 45%, 51%);
+}
+
+label:after {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 4px;
+  transition: ease-in-out 200ms;
+}
+
+input:checked + label {
+  background: hsl(247deg, 4.8%, 32.5%);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
 .profile-card {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +126,7 @@ html {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   padding: 20px 0;
@@ -116,7 +159,7 @@ html {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -151,7 +194,7 @@ html {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -195,7 +238,7 @@ html {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -239,7 +282,7 @@ html {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -255,7 +298,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 0 20px;
   margin-right: -2.5px;
   height: 32px;
@@ -288,7 +331,7 @@ html {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   text-decoration: none;
   padding: 0;
   text-align: start;
@@ -385,7 +428,7 @@ html {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -402,7 +445,7 @@ html {
   background-color: var(--element);
   padding: 20px;
   box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
-  border-radius: 20px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   gap: 20px;

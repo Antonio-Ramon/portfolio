@@ -1,7 +1,45 @@
 // Default Styles
+// Caso queira deixar o tema automático de acordo com o dispositivo
 
-:root {
+// :root {
+//     --background: hsl(300, 20.0%, 99.0%);
+//     // --background: hsl(246, 6.0%, 9.0%);
+
+//     --element: hsl(294, 5.5%, 95.3%);
+//     --element-hover: hsl(289, 4.7%, 93.3%);
+//     --element-hover-border: hsl(255, 3.7%, 78.8%);
+
+//     --low-contrast: hsl(252, 4.0%, 44.8%);
+//     --high-contrast: hsl(260, 25.0%, 11.0%);
+
+//     --brand-solid: hsl(292, 45.0%, 51.0%);
+//     // --brand-solid: rgb(4, 206, 95);
+
+//     --brand-high-contrast: hsl(291, 66.0%, 14.0%);
+
+// }
+
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --background: hsl(246, 6.0%, 9.0%);
+
+//         --element: hsl(241, 5.0%, 14.3%);
+//         --element-hover: hsl(242, 4.9%, 16.5%);
+//         --element-hover-border: hsl(247, 4.8%, 32.5%);
+    
+//         --low-contrast: hsl(253, 4.0%, 63.7%);
+//         --high-contrast: hsl(256, 6.0%, 93.2%);
+    
+//         --brand-solid: hsl(292, 45.0%, 51.0%);
+//         --brand-high-contrast: hsl(296, 74.0%, 95.7%);
+//     }
+// }
+
+html {
+    background-color: var(--background);
+    color: var(--high-contrast);
     --background: hsl(300, 20.0%, 99.0%);
+    // --background: hsl(246, 6.0%, 9.0%);
 
     --element: hsl(294, 5.5%, 95.3%);
     --element-hover: hsl(289, 4.7%, 93.3%);
@@ -14,29 +52,25 @@
     // --brand-solid: rgb(4, 206, 95);
 
     --brand-high-contrast: hsl(291, 66.0%, 14.0%);
+} 
 
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: hsl(246, 6.0%, 9.0%);
-
-        --element: hsl(241, 5.0%, 14.3%);
-        --element-hover: hsl(242, 4.9%, 16.5%);
-        --element-hover-border: hsl(247, 4.8%, 32.5%);
-    
-        --low-contrast: hsl(253, 4.0%, 63.7%);
-        --high-contrast: hsl(256, 6.0%, 93.2%);
-    
-        --brand-solid: hsl(292, 45.0%, 51.0%);
-        --brand-high-contrast: hsl(296, 74.0%, 95.7%);
-    }
-}
-
-html {
+html[data-theme='darktheme'] {
     background-color: var(--background);
     color: var(--high-contrast);
-}
+    --background: hsl(246, 6.0%, 9.0%);
+    
+    --element: hsl(241, 5.0%, 14.3%);
+    --element-hover: hsl(242, 4.9%, 16.5%);
+    --element-hover-border: hsl(247, 4.8%, 32.5%);
+    
+    --low-contrast: hsl(253, 4.0%, 63.7%);
+    --high-contrast: hsl(256, 6.0%, 93.2%);
+    
+    --brand-solid: hsl(292, 45.0%, 51.0%);
+    --brand-high-contrast: hsl(296, 74.0%, 95.7%);
+    // background: url(https://images.squarespace-cdn.com/content/v1/5180da74e4b01eeb7aecdc64/1623584793919-RTH3ETJLT9SG1XZEN6AE/Lofoten-Uttakleiv-05-21-2.jpg) no-repeat center fixed;
+} 
+
 
 * {
     margin: 0;
@@ -48,7 +82,7 @@ html {
 }
 /* Metrics */
 
-$defaultRadius: 20px;
+$defaultRadius: 15px;
 $defaultSpacing: 20px;
 
 $smallScreen: 767px;
@@ -63,4 +97,69 @@ $extraLargeScreen: 1366px;
     padding: $defaultSpacing;
     box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.090);
     border-radius: $defaultRadius;
-  }
+
+    // Efeito transparente
+    // border-top: 1px solid rgba(255, 255, 255, 0.5);
+    // border-right: 1px solid rgba(255, 255, 255, 0.5);
+    // backdrop-filter: blur(15px);
+    // -webkit-backdrop-filter: blur(15px);
+
+}
+
+html {
+    background: var(--background);
+    
+}
+
+
+input[type=checkbox] {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    
+}
+
+label {
+  margin: $defaultSpacing;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 30px;
+
+  background: hsl(292, 45.0%, 51.0%);
+}
+
+label:after {
+  border-radius: 50%;
+  position: absolute;
+  content: '';
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 4px;
+  transition: ease-in-out 200ms;
+}
+
+input:checked + label {
+  background: hsl(247, 4.8%, 32.5%);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+// html.transition,
+// html.transition *,
+// html.transition *:before,
+// html.transition *:after {
+//   transition: ease-in-out 200ms !important;
+//   transition-delay: 0 !important;
+// }
+  
