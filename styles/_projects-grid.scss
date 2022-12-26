@@ -110,7 +110,7 @@
                         }
 
                         &.javascript {
-                            background-color: #d6d304;
+                            background-color: #f1e05a;
                         }
 
                         &.html {
@@ -120,6 +120,15 @@
                         &.scss {
                             background-color: #c6538c;
                         }
+
+                        &.css {
+                            background-color: #563d7c;
+                        }
+
+                        &.ejs {
+                            background-color: #a91e50;
+                        }
+
                     }
 
                     > span {
