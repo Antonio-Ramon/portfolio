@@ -28,7 +28,7 @@ function getApiGitHub() {
     // Laço que percorrerá todos os repositórios públicos do usuário
     for (const item of data) {
       
-      console.log(getRepoInfo(item))
+      // console.log(getRepoInfo(item))
 
 
       const link = createLink(item, `${getRepoInfo(item).url}`, `${getRepoInfo(item).title}`)
