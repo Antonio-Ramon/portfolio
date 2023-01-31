@@ -1,4 +1,4 @@
-:root {
+.light {
   background-color: var(--background);
   color: var(--high-contrast);
   --background: hsl(300, 20%, 99%);

@@ -1,3 +1,9 @@
+// Pequeno atraso no loading da página para evitar a animação do Switch
+// document.documentElement.removeAttribute ="hidden";
+setTimeout(function () {
+  document.documentElement.removeAttribute("hidden");
+}, 150);
+
 document.addEventListener("DOMContentLoaded", function () {
   // Carregar os dados salvos no localStorage do navegador.
   var checkbox = document.getElementById("switch");
@@ -15,7 +21,6 @@ function toggleMode() {
   html.classList.toggle("dark");
   saveCheckboxState();
   saveThemeState();
-  // console.log(html);
 }
 
 // Função para salvar o estado caso o botão tenha sido pressionado ou não.
@@ -35,8 +40,4 @@ function saveThemeState() {
 //   html.removeClass = "image-container";
 // }, 1000);
 
-// Carregar os dados salvos no localStorage do navegador.
-// let html = document.documentElement;
-// setTimeout(function () {
-//   html.removeAttribute = "hidden";
-// }, 1000);
+// Atraso no carregamento da página
