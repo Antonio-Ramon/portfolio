@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Carregar os dados salvos no localStorage do navegador.
+  var checkbox = document.getElementById("switch");
+  var checkboxState = localStorage.getItem("checkboxState");
+  checkbox.checked = checkboxState === "true";
+
+  var themeState = localStorage.getItem("class");
+  document.documentElement.setAttribute("class", themeState);
+});
+
 // Função para mudar o tema
 function toggleMode() {
   // documentElement refere-se a tag <html> no index.html
@@ -5,6 +15,7 @@ function toggleMode() {
   html.classList.toggle("dark");
   saveCheckboxState();
   saveThemeState();
+  // console.log(html);
 }
 
 // Função para salvar o estado caso o botão tenha sido pressionado ou não.
@@ -19,12 +30,13 @@ function saveThemeState() {
   localStorage.setItem("class", theme);
 }
 
-// Carregar os dados salvos no localStorage do navegador.
-window.onload = () => {
-  var checkbox = document.getElementById("switch");
-  var checkboxState = localStorage.getItem("checkboxState");
-  checkbox.checked = checkboxState === "true";
+// setTimeout(function () {
+//   let html = document.getElementsByClassName("image-container");
+//   html.removeClass = "image-container";
+// }, 1000);
 
-  var themeState = localStorage.getItem("class");
-  document.documentElement.setAttribute("class", themeState);
-};
+// Carregar os dados salvos no localStorage do navegador.
+// let html = document.documentElement;
+// setTimeout(function () {
+//   html.removeAttribute = "hidden";
+// }, 1000);
