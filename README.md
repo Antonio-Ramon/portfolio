@@ -17,10 +17,10 @@ Para visualizar os projetos em meu portfolio, basta clonar este repositório e a
 
 Os projetos em meu portfolio incluem:
 
-- Um bot usando API da open-ai pra auxiliar os estudos.
 - Um site simples mostrando jogos e streamers favoritos
 - Um componente que simula o preenchimento e de cartão de crédito
-- outros mais...
+- Alguns projetos NLW pela rocketseat
+- e muito mais...
 
 ## Contato
 
