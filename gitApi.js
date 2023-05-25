@@ -1,40 +1,42 @@
 function getApiGitHub() {
-  fetch('https://api.github.com/users/antonio-ramon/repos')
-  .then(response => response.json())
-  .then(data => {
-    const projects = document.querySelector('div.projects-grid-card');
-       
-    //Pegando as informações da API, que serão úteis pro projeto
-    const getRepoInfo = item => {
-      return {
-        title: item.name,
-        description: item.description,
-        starCount: item.stargazers_count,
-        forkCount: item.forks_count,
-        lang: item.language,
-        url: item.html_url,
-      }
-    }
+  fetch("https://api.github.com/users/antonio-ramon/repos")
+    .then((response) => response.json())
+    .then((data) => {
+      const projects = document.querySelector("div.projects-grid-card");
 
-    // Função para criação de links
-    const createLink = (item, url, title) => {
-      const link = document.createElement('a');
-      link.setAttribute('href', `${url}`)
-      link.setAttribute('title', `Abrir repositório de ${title}`);
-      link.setAttribute('target', '_blank');
-      return link
-    }
-    
-    // Laço que percorrerá todos os repositórios públicos do usuário
-    for (const item of data) {
-      
-      // console.log(getRepoInfo(item))
+      //Pegando as informações da API, que serão úteis pro projeto
+      const getRepoInfo = (item) => {
+        return {
+          title: item.name,
+          description: item.description,
+          starCount: item.stargazers_count,
+          forkCount: item.forks_count,
+          lang: item.language,
+          url: item.html_url,
+        };
+      };
 
+      // Função para criação de links
+      const createLink = (url, title) => {
+        const link = document.createElement("a");
+        link.setAttribute("href", `${url}`);
+        link.setAttribute("title", `Abrir repositório de ${title}`);
+        link.setAttribute("target", "_blank");
+        return link;
+      };
 
-      const link = createLink(item, `${getRepoInfo(item).url}`, `${getRepoInfo(item).title}`)
-      
-      // Cards/links dos projetos
-      link.innerHTML = `
+      // Laço que percorrerá todos os repositórios públicos do usuário
+      for (const item of data) {
+        console.log(getRepoInfo(item));
+
+        const link = createLink(
+          item,
+          `${getRepoInfo(item).url}`,
+          `${getRepoInfo(item).title}`
+        );
+
+        // Cards/links dos projetos
+        link.innerHTML = `
       <div>
         <header>
           <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,12 +76,10 @@ function getApiGitHub() {
           </div>
         </footer>
       </div>`;
-      
-      projects.appendChild(link);
 
+        projects.appendChild(link);
       }
-      
-    })
+    });
 }
 
-getApiGitHub()
+getApiGitHub();
