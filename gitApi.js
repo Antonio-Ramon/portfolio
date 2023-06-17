@@ -19,7 +19,7 @@ function getApiGitHub() {
       // Função para criação de links
       const createLink = (url, title) => {
         const link = document.createElement("a");
-        link.setAttribute("href", `${url}`);
+        link.setAttribute("href", `${url.html_url}`);
         link.setAttribute("title", `Abrir repositório de ${title}`);
         link.setAttribute("target", "_blank");
         return link;
@@ -27,8 +27,6 @@ function getApiGitHub() {
 
       // Laço que percorrerá todos os repositórios públicos do usuário
       for (const item of data) {
-        console.log(getRepoInfo(item));
-
         const link = createLink(
           item,
           `${getRepoInfo(item).url}`,
