@@ -36,6 +36,7 @@
 /* Metrics */
 html {
   background: var(--background);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 input[type=checkbox] {
@@ -55,7 +56,7 @@ label {
   text-indent: -9999px;
   width: 55px;
   height: 30px;
-  background: hsl(292, 45%, 51%);
+  background: hsl(292deg, 45%, 51%);
 }
 
 label:after {
@@ -67,11 +68,11 @@ label:after {
   height: 20px;
   top: 5px;
   left: 4px;
-  transition: ease-in-out 100ms;
+  transition: 200ms ease-in-out;
 }
 
 input:checked + label {
-  background: hsl(247, 4.8%, 32.5%);
+  background: hsl(247deg, 4.8%, 32.5%);
 }
 
 input:checked + label:after {
@@ -82,7 +83,7 @@ input:checked + label:after {
 .profile-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -125,7 +126,7 @@ input:checked + label:after {
 .info-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -158,7 +159,7 @@ input:checked + label:after {
 .techs-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -193,7 +194,7 @@ input:checked + label:after {
 .xp-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -237,7 +238,7 @@ input:checked + label:after {
 .education-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -281,7 +282,7 @@ input:checked + label:after {
 .projects-header-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -330,7 +331,7 @@ input:checked + label:after {
 .projects-grid-card > a {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   text-decoration: none;
   padding: 0;
@@ -338,7 +339,7 @@ input:checked + label:after {
   outline: 2px solid transparent;
   transition: outline-color 150ms ease-out;
 }
-.projects-grid-card > a:hover > div, .projects-grid-card > a:focus > div {
+.projects-grid-card > a:hover, .projects-grid-card > a:focus {
   background-color: var(--element-hover);
 }
 .projects-grid-card > a:focus-visible {
@@ -436,7 +437,7 @@ input:checked + label:after {
 .posts-header-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -453,7 +454,7 @@ input:checked + label:after {
 .posts-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   align-items: center;

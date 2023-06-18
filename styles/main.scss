@@ -86,7 +86,8 @@ body {
 
       outline: 2px solid transparent;
 
-      transition: background-color 150ms ease-out, color 150ms ease-out, outline-color 150ms ease-out;
+      transition: background-color 150ms ease-out, color 150ms ease-out,
+        outline-color 150ms ease-out;
 
       &:hover,
       &:focus {
