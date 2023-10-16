@@ -69,8 +69,8 @@ function getApiGitHub() {
           </div>
 
           <div class="lang">
-            <div class="dot ${getRepoInfo(item).lang.toLowerCase()}"></div>
-            <span>${getRepoInfo(item).lang}</span>
+            <div class="dot ${getRepoInfo(item).lang ? getRepoInfo(item).lang.toLowerCase() : "Unknow"}"></div>
+            <span>${getRepoInfo(item).lang ? getRepoInfo(item).lang : "Not specified" }</span>
           </div>
         </footer>
       </div>`;

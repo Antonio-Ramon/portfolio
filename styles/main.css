@@ -428,6 +428,9 @@ input:checked + label:after {
 .projects-grid-card > a > div > footer > .lang > .dot.vue {
   background-color: #3fb27f;
 }
+.projects-grid-card > a > div > footer > .lang > .dot.java {
+  background-color: #b07219;
+}
 .projects-grid-card > a > div > footer > .lang > span {
   font-size: 14px;
   line-height: 20px;
