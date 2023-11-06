@@ -56,7 +56,7 @@ label {
   text-indent: -9999px;
   width: 55px;
   height: 30px;
-  background: hsl(292deg, 45%, 51%);
+  background: hsl(292, 45%, 51%);
 }
 
 label:after {
@@ -72,7 +72,7 @@ label:after {
 }
 
 input:checked + label {
-  background: hsl(247deg, 4.8%, 32.5%);
+  background: hsl(247, 4.8%, 32.5%);
 }
 
 input:checked + label:after {
@@ -83,7 +83,7 @@ input:checked + label:after {
 .profile-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -126,7 +126,7 @@ input:checked + label:after {
 .info-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -159,7 +159,7 @@ input:checked + label:after {
 .techs-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -194,7 +194,7 @@ input:checked + label:after {
 .xp-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -238,7 +238,7 @@ input:checked + label:after {
 .education-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -282,7 +282,7 @@ input:checked + label:after {
 .projects-header-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -331,7 +331,7 @@ input:checked + label:after {
 .projects-grid-card > a {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   text-decoration: none;
   padding: 0;
@@ -431,6 +431,9 @@ input:checked + label:after {
 .projects-grid-card > a > div > footer > .lang > .dot.java {
   background-color: #b07219;
 }
+.projects-grid-card > a > div > footer > .lang > .dot.python {
+  background-color: #3572a5;
+}
 .projects-grid-card > a > div > footer > .lang > span {
   font-size: 14px;
   line-height: 20px;
@@ -440,7 +443,7 @@ input:checked + label:after {
 .posts-header-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -457,7 +460,7 @@ input:checked + label:after {
 .posts-card {
   background-color: var(--element);
   padding: 20px;
-  box-shadow: 2px 2px 2px 1px hsla(0deg, 0%, 0%, 0.09);
+  box-shadow: 2px 2px 2px 1px hsla(0, 0%, 0%, 0.09);
   border-radius: 15px;
   display: flex;
   align-items: center;

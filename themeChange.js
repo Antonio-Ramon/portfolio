@@ -1,5 +1,3 @@
-// Pequeno atraso no loading da página para evitar a animação do Switch
-// document.documentElement.removeAttribute ="hidden";
 setTimeout(function () {
   document.documentElement.removeAttribute("hidden");
 }, 150);
@@ -34,10 +32,3 @@ function saveThemeState() {
   var theme = document.documentElement.getAttribute("class");
   localStorage.setItem("class", theme);
 }
-
-// setTimeout(function () {
-//   let html = document.getElementsByClassName("image-container");
-//   html.removeClass = "image-container";
-// }, 1000);
-
-// Atraso no carregamento da página
